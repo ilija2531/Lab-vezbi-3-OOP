@@ -1,0 +1,37 @@
+package zadaca4;
+
+public class Brojac {
+    public int brojNaFrlanja = 0;
+    public int brojNaGlavi = 0;
+    public int brojNaPisma = 0;
+
+    public int ZgolemiGlava(){
+        return this.brojNaGlavi++;
+    }
+    public int ZgolemiPisma(){
+        return this.brojNaPisma++;
+    }
+
+    public int ZgolemiBrojNaFrlanja(){
+        return this.brojNaFrlanja++;
+    }
+
+    public int getBrojNaPisma() {
+        return brojNaPisma;
+    }
+
+    public int getBrojNaFrlanja() {
+        return brojNaFrlanja;
+    }
+
+    public int getBrojNaGlavi() {
+        return brojNaGlavi;
+    }
+
+    public void resetBrojNaFrlanja(){
+        brojNaFrlanja = 0;
+        brojNaGlavi = 0;
+        brojNaPisma = 0;
+    }
+
+}

@@ -1,0 +1,47 @@
+package zadaca4;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Paricka {
+	
+	public int brojNaFrlanja;
+	Brojac br1 = new Brojac();
+	
+	public void brNaFrlanja() {
+		try (Scanner input = new Scanner(System.in)) {
+			System.out.println("Vnesi broj na frlanja ");
+			brojNaFrlanja = input.nextInt();
+		}
+		br1.brojNaFrlanja = brojNaFrlanja;
+		randomMetod();
+	}
+	 public void randomMetod(){
+	        for(int i = 0; i < brojNaFrlanja; i++){
+	            Random ran = new Random();
+	            int randomBroj = ran.nextInt(2);
+	            if(randomBroj == 0){
+	                br1.ZgolemiGlava();
+	            }else{
+	                br1.ZgolemiPisma();
+	            }
+	            br1.ZgolemiBrojNaFrlanja();
+	        }
+	    }
+
+	    public void pecatiBrojNaFrlanja(){
+	        System.out.println("Broj na frlanja: " + br1.getBrojNaFrlanja());
+	    }
+	   public void pecatiPismo(){
+	        System.out.println("Broj na Pisma: " + br1.getBrojNaPisma());
+	    }
+	    public void pecatiGlava(){
+	        System.out.println("Broj na Glavi: " + br1.getBrojNaGlavi());
+	    }
+	   
+	    public void reset(){
+	        br1.resetBrojNaFrlanja();
+	    }
+
+	
+}
